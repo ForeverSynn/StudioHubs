@@ -28,3 +28,6 @@ TestResults/
 coverage/
 *.coverage
 *.coveragexml
+
+# lsheardo build output
+out-12.4/
