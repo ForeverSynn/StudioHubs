@@ -58,7 +58,7 @@ This repository includes a manually triggered GitHub Actions workflow at `.githu
 
 When run from the Actions tab, it:
 
-1. Computes the next `vX.Y.Z.W` tag (patch increment, or the optional `version` input).
+1. Computes the next `vX.Y.Z.W` tag (patch increment, or the optional `version` input), commits the updated metadata and project version, and pushes `HEAD` to `main`. Run it from `main` only: started from another branch it would push that branch's commits to `main` too.
 2. Builds with `dotnet publish -c Release`.
 3. Creates a ZIP release asset named after the tag (for example, `v1.0.12.0.zip`).
 4. Creates a GitHub release and uploads that ZIP asset.
