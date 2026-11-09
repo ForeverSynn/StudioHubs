@@ -42,7 +42,7 @@ Optional arguments:
 - `--configuration Debug` to use another build configuration
 - `--output-dir PATH` to write artifacts somewhere else
 
-To test the package, stop Jellyfin, back up the existing plugin folder, then extract the ZIP into a new plugin folder under Jellyfin's plugins directory and restart the server. Review the Jellyfin log for plugin load errors. Remove the test folder and restore the backup to roll back.
+To test the package, stop Jellyfin and move the existing Studio Hubs plugin folder out of Jellyfin's plugins directory (keep it as the backup; Jellyfin loads only one version of a plugin, and a second version folder left in place can be marked superseded or removed). Then extract the ZIP into a new plugin folder under the plugins directory and start the server. Review the Jellyfin log for plugin load errors. To roll back, stop Jellyfin, remove the test folder and move the backup folder back.
 
 Local and release packages include:
 
@@ -58,8 +58,8 @@ This repository includes a manually triggered GitHub Actions workflow at `.githu
 
 When run from the Actions tab, it:
 
-1. Computes the next `StudioHubs_vX.Y.Z` tag (patch increment).
+1. Computes the next `vX.Y.Z.W` tag (patch increment, or the optional `version` input).
 2. Builds with `dotnet publish -c Release`.
-3. Creates a ZIP release asset named after the tag (for example, `StudioHubs_v1.0.1.zip`).
+3. Creates a ZIP release asset named after the tag (for example, `v1.0.12.0.zip`).
 4. Creates a GitHub release and uploads that ZIP asset.
-5. Uses the merged PR description as release notes when available.
+5. Uses the `release_notes` input as release notes, or the manual-trigger message when it is empty.
