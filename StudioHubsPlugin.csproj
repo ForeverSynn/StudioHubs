@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>Jellyfin.Plugin.StudioHubs</AssemblyName>
     <RootNamespace>Jellyfin.Plugin.StudioHubs</RootNamespace>
-    <Version>1.0.11.0</Version>
+    <Version>1.0.12.0</Version>
     <AssemblyVersion>$(Version)</AssemblyVersion>
     <FileVersion>$(Version)</FileVersion>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
@@ -23,7 +23,7 @@
     <PackageReference Include="Jellyfin.Model" Version="12.4.0" />
     <PackageReference Include="Jellyfin.Common" Version="12.4.0" />
     <PackageReference Include="Jellyfin.Data" Version="12.4.0" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="10.0.0" />
   </ItemGroup>
 
   <ItemGroup>
