@@ -395,7 +395,8 @@ function placeSection(root, section) {
   const position = CACHE.config?.homePosition || "after-my-media";
   const target = position === "top" ? null :
     findPositionTarget(children, position) || findPositionTarget(children, "after-my-media") ||
-    children.find(candidate => candidate.classList.contains("section0"));
+    children.find(candidate => candidate.classList.contains("section0")) ||
+    children.find(candidate => candidate.classList.contains("homeSection") && candidate !== section);
   const reference = target ? target.nextElementSibling : children[0] || null;
   // Avoid redundant DOM moves during polling and preserve focus/scroll position.
   if (reference === section || (section.parentElement === root && section.nextElementSibling === reference)) return;
