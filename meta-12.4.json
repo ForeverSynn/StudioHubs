@@ -1,14 +1,14 @@
 {
   "category": "General",
-  "changelog": "Rebuilt for Jellyfin 12.4 on Media-Serv (lsheardo-12.4 branch) from upstream 1.0.12.0. Added: option to hide the Home section title. More info: [StudioHubs](https://github.com/MFerretti27/StudioHubs)",
+  "changelog": "Rebuilt for Jellyfin 12.4 on Media-Serv (lsheardo-12.4 branch) from upstream 1.0.13.0. Added: Home row position setting; option to hide the Home section title. More info: [StudioHubs](https://github.com/MFerretti27/StudioHubs)",
   "description": "Adds a configurable studio hubs row with admin-managed global studio visibility and order.",
   "guid": "8ab79914-1be0-4f4a-92aa-25ecf5ecad16",
   "name": "Studio Hubs",
   "overview": "Standalone studio hubs feature for Jellyfin home screen.",
   "owner": "MFerretti27",
   "targetAbi": "12.4.0.0",
-  "timestamp": "2026-11-09T21:54:36Z",
-  "version": "1.0.12.0",
+  "timestamp": "2026-11-12T04:41:47Z",
+  "version": "1.0.13.0",
   "status": "Active",
   "autoUpdate": false,
   "assemblies": [
